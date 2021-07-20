@@ -29,12 +29,14 @@
     mx=parseInt(Math.random()*10);
     my=parseInt(Math.random()*10);
     vivo=true;
+    var pontuacao = 0
     function anda(){
         document.getElementById('td'+cobra[cobra.length-1][0]+'_'+cobra[cobra.length-1][1]).style.background="#ffffff";
         if(mx==cobra[cobra.length-1][0]&&my==cobra[cobra.length-1][1]){
             mx=parseInt(Math.random()*10);
             my=parseInt(Math.random()*10);
             cobra[cobra.length]=[10,10];
+            pontuacao = pontuacao + 10;
         }
         for(x=cobra.length-1;x>0;x--){
             cobra[x][0]=cobra[x-1][0];
@@ -60,5 +62,6 @@
         if(tecla==40)direcao=3;
     }
 </script>
+<h3 id="puntuacao"> 0 </h3>
 </body>
 </html>
