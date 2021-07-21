@@ -22,6 +22,7 @@
 <h1> Snake Game </h1>
 
 
+
 <div id=principal></div>
 
 <script>
@@ -68,12 +69,12 @@ function anda(){
         }
         catch (e) {
             vivo=false;
-            document.getElementById('pontuacao').innerHTML="Game Over! Seu score foi: "+pontuacao;
+            document.getElementById('pontuacao').innerHTML="GAME OVER! <br> Seu score foi: "+pontuacao;
         }
     document.getElementById('td'+cobra[0][0]+'_'+cobra[0][1]).style.background="rgb(25, 180, 59)";
     document.getElementById('td'+mx+'_'+my).style.background="#ff3333";
     if(vivo)setTimeout('anda()',250);
-    else document.getElementById("pontuacao").innerHTML="Game Over! Seu score foi: "+pontuacao;
+    else document.getElementById("pontuacao").innerHTML="GAME OVER! <br> Seu score foi: "+pontuacao;
 }
 anda();
 function pegadirecao(tecla){
